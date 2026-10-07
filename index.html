@@ -15,7 +15,8 @@
 :root[data-theme="dark"]{--bg:#0a1622;--ink:#e8e4da;--mute:#98a6b6;--accent:#d2ae68;--line:#223548;--card:#112233;--hero:#07111b}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:4rem}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.75 "Public Sans",system-ui,sans-serif}
+html{overflow-x:clip}
+body{overflow-x:hidden;overflow-x:clip;margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.75 "Public Sans",system-ui,sans-serif}
 ::selection{background:var(--gold);color:#0b1f33}
 a{color:var(--accent);text-underline-offset:3px}
 a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
@@ -88,6 +89,20 @@ footer{background:var(--hero);color:var(--hero-mute);padding:2.2rem 0;font-size:
 .news li:first-child{padding-top:0}
 .news li:last-child{border-bottom:0}
 .news .when{margin:0}
+section#about{display:block}
+.about-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:3rem;margin-top:2rem;align-items:start}
+.about-bio p{font:400 1.15rem/1.85 "Source Serif 4",Georgia,serif;margin:0 0 1.1rem}
+.about-card{background:var(--card);border-top:2px solid var(--gold);padding:1.6rem}
+.about-card dt{font-size:.85rem;color:var(--accent);font-weight:500;margin-top:1rem}
+.about-card dt:first-child{margin-top:0}
+.about-card dd{color:var(--ink)}
+.about-card .ri{margin:1.6rem 0 .7rem;font-size:.85rem;color:var(--accent);font-weight:500}
+.about-card .tags li{background:var(--bg)}
+@media (max-width:760px){.about-grid{grid-template-columns:1fr;gap:1.75rem}}
+.about-bio{max-width:42rem;margin-top:1.75rem}
+.interests{margin-top:2.2rem}
+.interests h3{font:500 1.15rem "Playfair Display",Georgia,serif;margin:0 0 .9rem}
+.interests .tags li{background:var(--card)}
 </style>
 <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -124,13 +139,21 @@ footer{background:var(--hero);color:var(--hero-mute);padding:2.2rem 0;font-size:
 <div class="facts reveal">
 <div><span>Current position</span><strong>Research Associate, BUET</strong></div>
 <div><span>Education</span><strong>BSc in Water Resources Engineering, BUET</strong></div>
-<div><span>Research focus</span><strong>Flood forecasting, hydrologic modeling, GIS</strong></div>
+<div><span>Location</span><strong>Dhaka, Bangladesh</strong></div>
 </div>
 
 <section class="reveal" id="about">
-<h2>About</h2>
-<div>
-<p class="about">I am a water resources engineer and a Research Associate at the Department of Water Resources Engineering, BUET. I completed my BSc at the same department in 2026. My work is about flood forecasting and the effect of climate change on river flows in Bangladesh. I use hydrologic models, GIS and remote sensing, and machine learning to study these problems. I am open to research collaboration in these areas.</p>
+<h2>About me</h2>
+<div class="about-bio">
+<p>Hello, I am Abdullah Al Noman. I graduated in Water Resources Engineering from BUET in 2026, and I now work as a Research Associate in the same department.</p>
+<p>I like to use data and models to understand rivers, floods and climate. I combine machine learning, spatial analysis and hydrodynamic modeling to work on climate and water management problems. I build models in HEC-RAS and HEC-HMS, and I use Python and ArcGIS for data analysis.</p>
+<p>My undergraduate thesis brought these skills together. In it, I compared machine learning and deep learning models for flood forecasting in the Ganges River Basin. If you would like to talk about this work, please feel free to contact me.</p>
+<div class="interests">
+<h3>Research interests</h3>
+<ul class="tags">
+<li>GIS and remote sensing</li><li>Hydrology</li><li>Open channel hydraulics</li><li>Hydrologic and hydrodynamic modeling</li><li>Machine and deep learning</li><li>Flood forecasting</li><li>Climate modeling</li>
+</ul>
+</div>
 </div>
 </section>
 
@@ -159,12 +182,6 @@ footer{background:var(--hero);color:var(--hero-mute);padding:2.2rem 0;font-size:
 <div class="item">
 <h3>Salinity modeling in the Halda River</h3>
 <p>Simulated tidal intrusion and salt concentrations using HEC-RAS.</p>
-</div>
-<div class="item">
-<h3>Interests</h3>
-<ul class="tags">
-<li>GIS and remote sensing</li><li>Hydrology</li><li>Open channel hydraulics</li><li>Hydrologic and hydrodynamic modeling</li><li>Machine and deep learning</li><li>Flood forecasting</li><li>Climate modeling</li>
-</ul>
 </div>
 </div>
 </section>
@@ -282,7 +299,6 @@ footer{background:var(--hero);color:var(--hero-mute);padding:2.2rem 0;font-size:
 <p>Open to research collaboration.</p>
 <dl>
 <dt>Email</dt><dd><a href="mailto:abdullahalnoman2002@gmail.com">abdullahalnoman2002@gmail.com</a></dd>
-<dt>Phone</dt><dd><a href="tel:+8801776624235">+880 1776 624235</a></dd>
 <dt>Address</dt><dd>Dhaka, Bangladesh</dd>
 <dt>Profiles</dt><dd><a href="https://scholar.google.com/citations?hl=en&amp;user=DloZBvoAAAAJ" target="_blank" rel="noopener">Google Scholar</a>, <a href="https://www.researchgate.net/profile/Abdullah-Noman-58" target="_blank" rel="noopener">ResearchGate</a>, <a href="https://www.linkedin.com/in/abdullahalnoman16/" target="_blank" rel="noopener">LinkedIn</a>, <a href="https://www.facebook.com/Abdullah.Al.Noman.40/" target="_blank" rel="noopener">Facebook</a></dd>
 </dl>
